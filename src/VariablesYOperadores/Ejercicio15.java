@@ -8,6 +8,10 @@ centímetros.
          */
 
         // Fórmula: pi * radio al cuadrado
+        double radio = 5.2;
+        double area = Math.PI + Math.pow(radio,2);
 
+        //System.out.println(area);
+        //System.out.println("El resultado es %2f",area); // verificar en drive de ana
     }
 }
