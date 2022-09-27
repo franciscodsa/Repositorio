@@ -32,6 +32,8 @@ transcurrido entre dos momentos del mismo día. */
         System.out.println("Introduce los segundos:");
         int segundos2 = sc.nextInt();
 
+        System.out.println("Datos introducidos: momento inicial " + hora1 + ":" + minutos1 + ":" + segundos1 + " momento final: " + hora2 + ":" + minutos2 + ":" + segundos2);
+
 //        De momento vamos a considerar que los números introducidos van a estar en el rango adecuado y que el momento inicial
 //introducido es menor (o igual) que el momento final.
 
@@ -45,15 +47,15 @@ transcurrido entre dos momentos del mismo día. */
             difHora = ((momentoIncial-momentoFinal)/3600);
             difMin = (((momentoIncial-momentoFinal)%3600)/60);
             difSeg = (((momentoIncial-momentoFinal)%3600)%60);
-
         }
+
         else{
             difHora = ((momentoFinal-momentoIncial)/3600);
             difMin = (((momentoFinal-momentoIncial)%3600)/60);
             difSeg = (((momentoFinal-momentoIncial)%3600)%60);
         }
 
-        System.out.printf(difHora +":"+difMin+":"+difSeg);
+        System.out.printf("La diferencia es: " + difHora +":"+difMin+":"+difSeg);
         // EL TRUCO: PASAR A SEGUNDOS EL MOMENTOINICIAL Y EL MOMENTO FINAL
 
         // HALLAR LA DIFERENCIA ENTRE AMBOS
