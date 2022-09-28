@@ -17,14 +17,14 @@ public class Ejercicio19 {
 
         System.out.println("inserte x1:");
         double x1 = sc.nextDouble();
-        System.out.println("inserte x2:");
-        double x2 = sc.nextDouble();
         System.out.println("inserte y1:");
         double y1 = sc.nextDouble();
+        System.out.println("inserte x2:");
+        double x2 = sc.nextDouble();
         System.out.println("inserte y2:");
         double y2 = sc.nextDouble();
 
 
-        System.out.println("distancia es: " + Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1,2)));
+        System.out.println("La distancia entre A(" + x1 + ", " + y1 + ") y " + "B(" + x2 + ", " + y2 + ") es: " + Math.sqrt(Math.pow(x2-x1, 2) + Math.pow(y2-y1,2)));
     }
 }
