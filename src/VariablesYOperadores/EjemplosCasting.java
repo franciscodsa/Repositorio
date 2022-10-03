@@ -31,6 +31,6 @@ public class EjemplosCasting {
         //de double a short
         short entero16bits = (short) decimalDouble2;
         System.out.println(entero16bits);
-
+        ///
     }
 }
