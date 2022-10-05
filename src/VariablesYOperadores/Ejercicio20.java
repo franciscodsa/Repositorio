@@ -3,20 +3,20 @@ package VariablesYOperadores;
 import java.util.Scanner;
 
 public class Ejercicio20 {
-    //pide cuatro valores y saca la media
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        System.out.println("inserte numero");
-        int num1 = sc.nextInt();
-        System.out.println("inserte numero");
-        int num2 = sc.nextInt();
-        System.out.println("inserte numero");
-        int num3 = sc.nextInt();
-        System.out.println("inserte numero");
-        int num4 = sc.nextInt();
+//        20. Realizar un programa que lea cuatro valores numéricos
 
-        double media = (num1  + num2 + num3 + num4)/4;
+        // como vamos a tener que calcular la media, trabajamos con valores decimales
+        Scanner sc = new Scanner(System.in);
+        double n1 = sc.nextDouble();
+        double n2 = sc.nextDouble();
+        double n3 = sc.nextDouble();
+        double n4 = sc.nextDouble();
 
-        System.out.println("la media es: " + media);
+        //        e imprima su suma y su media. Ten en cuenta que la media puede contener decimales.
+        double suma = n1 + n2 + n3 + n4;
+        double media = suma / 4;
+        System.out.println("Suma: " + suma);
+        System.out.println("Media: " + media);
     }
 }

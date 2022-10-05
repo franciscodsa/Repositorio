@@ -2,42 +2,37 @@ package VariablesYOperadores;
 
 public class EjemplosBoolean {
     public static void main(String[] args) {
-        boolean apto= false;
-        System.out.println("Es apto?" + apto);
+        boolean apto = false;
+        System.out.println("¿Es apto? " + apto);
 
-        //operadore logico
-        //Usuario: ! Not
+        // Operadores lógicos
+        // Unario: ! NOT
+
         System.out.println(!apto);
 
+        // Operadores binaros: se utilizan con 2 variables
+        // AND y
+        System.out.println("AND");
+        System.out.println("===");
+        boolean v1 = true;
+        boolean v2 = true;
+        boolean and = v1 && v2;
+        System.out.println(and);
 
-        //&& and
-        boolean v1= true;
-        boolean v2= true;
-        boolean v3= v1 && v2;
+        // OR o ||
+        System.out.println("OR");
+        boolean or = v1 || v2;
+        System.out.println(or);
 
-        System.out.println("and " + v3);
+        // XOR ^
+        System.out.println("XOR");
+        boolean xor = v1 ^ v2;
+        System.out.println(xor);
 
-        // || or
-        v1= true;
-        v2= false;
-        v3= v1 || v2;
-
-        System.out.println("or " + v3);
-
-        //XOR ^
-        v1= true;
-        v2= true;
-        v3= v1 ^ v2;
-
-        System.out.println("XOR " + v3);
-
-        //1º not, 2º XOR, 3º or, 4º and --> orden de operaciones
-
-
-        boolean frio = false; //no hace frio
-        boolean seco = true; //hace buen tiempo
+        boolean frío = false; // no hace frío
+        boolean seco = true; // hace tiempo seco
         boolean verano = false; // no estamos en verano
-        boolean trekking = seco && (!frio || verano); //true, nos vamos de trekking
+        boolean trekking = seco && (!frío || verano); // ¡true, nos vamos de trekking!
 
     }
 }

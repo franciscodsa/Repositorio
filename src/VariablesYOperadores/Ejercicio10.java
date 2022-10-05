@@ -1,16 +1,16 @@
 package VariablesYOperadores;
 
 import java.util.Scanner;
-//10. Dado un número de dos dígitos, imprime su primer número (las decenas).
+
 public class Ejercicio10 {
     public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-
-        System.out.println("Inserte numero de dos digitos:");
+        // 10. Dado un número de dos dígitos, imprime su primer número (las decenas).
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Introduce un número de dos dígitos: ");
         int numero = sc.nextInt();
 
-        System.out.println("El primer digito es:");
-        System.out.println(numero/10);
-
+        // las decenas son el cociente
+        System.out.println("Las decenas son: " + (numero / 10));
+        System.out.println("... y las unidades, " + (numero % 10));
     }
 }

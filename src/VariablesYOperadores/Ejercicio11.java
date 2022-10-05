@@ -2,16 +2,20 @@ package VariablesYOperadores;
 
 import java.util.Scanner;
 
-//11.Dado un número de dos cifras, escribe un programa que permita obtener el número
-//invertido. Ejemplo, si se introduce 23 que muestre 32.
 public class Ejercicio11 {
     public static void main(String[] args) {
-
+//        11. Dado un número de dos cifras,
         Scanner sc = new Scanner(System.in);
+        System.out.print("Dime un número de dos cifras: ");
+        int numero = sc.nextInt();
+//        escribe un programa que permita obtener el número invertido.
+//        Ejemplo, si se introduce 23 que muestre 32.
 
-        System.out.println("inserte numero a invertir");
-        int num = sc.nextInt();
+        // extraemos las decenas
+        int decenas = numero / 10;
+        int unidades = numero % 10;
 
-        System.out.println("numero invertido: " + num%10 + "" + num/10); //num%10 da las unidades de un numero de dos cifras dividido entre 10. Las decenas se obtienen dividiendo entre 10 num/10
+        // lo mostramos al revés
+        System.out.println(unidades + "" +  decenas);
     }
 }

@@ -4,17 +4,22 @@ import java.util.Scanner;
 
 public class Ejercicio12 {
     public static void main(String[] args) {
+//       12. Escribe un programa que lea un número de tres cifras
         Scanner sc = new Scanner(System.in);
-        System.out.println("ingrese numero");
-        int nume = sc.nextInt();
+        int numero = sc.nextInt();
 
-        int num1= nume/100;
-        int num2= (nume%100)/10;
-        int num3= (nume%100)%10;
+//       y muestre el número invertido.
+//Por ejemplo: si introducimos el número 320, el programa debe mostrar 23; si
+//introducimos 976, el programa debe mostrar 679.
 
-        System.out.print(num3);
-        System.out.print(num2);
-        System.out.print(num1);
+        int centenas = numero / 100;
+        int auxiliar = numero % 100; // en este resto están decenas y unidades
+        int decenas = auxiliar / 10;
+        int unidades = auxiliar % 10;
+        System.out.println(unidades + "" + decenas + "" + centenas); // los "" es para que no los sume, que los trate como texto
+
+
+
+
     }
-
 }

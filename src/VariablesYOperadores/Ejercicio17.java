@@ -4,16 +4,20 @@ import java.util.Scanner;
 
 public class Ejercicio17 {
     public static void main(String[] args) {
-        //17. Calcular el área de un triangulo ( base * altura)/2. Resuelve el ejercicio primero con
-        //variables de tipo entero y después con variables de tipo float.
-
+//        17. Calcular el área de un triangulo ( base * altura)/2.
         Scanner sc = new Scanner(System.in);
-        System.out.println("inserte base de triangulo");
+        System.out.print("Base: ");
         double base = sc.nextDouble();
-        System.out.println("inserte altura de triangulo");
+        System.out.print("Altura: ");
         double altura = sc.nextDouble();
 
-        System.out.println("el area del triangulo es: " + (base*altura)/2);
+//        Resuelve el ejercicio primero con variables de tipo entero -> pasamos porque no es correcto hacerlo así
+//        y después con variables de tipo float.
+        // Calculamos
+        double area = ( base * altura)/2;
+
+        // Mostramos resultado
+        System.out.println("Área: " + area);
 
     }
 }
