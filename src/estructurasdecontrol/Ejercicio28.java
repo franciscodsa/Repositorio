@@ -4,31 +4,44 @@ import java.util.Scanner;
 
 public class Ejercicio28 {
     public static void main(String[] args) {
+        /*
+        Escribe un programa que reciba dos valores enteros por teclado, a y b, y dibuje un
+rectángulo en que la base sea el número mayor y la altura el número menor, con un
+carácter también introducido por teclado.
+         */
         Scanner sc = new Scanner(System.in);
-        System.out.println("introduce base ");
+        System.out.print("a: ");
         int a = sc.nextInt();
-        System.out.println("introduce altura");
+        System.out.print("b: ");
         int b = sc.nextInt();
-        System.out.println("introduce caracte");
-        char l = sc.next().charAt(0);
 
+        // tengo que comprobar que ninguno sea 0 o negativo
         if (a <= 0 || b <= 0) {
-            System.out.println("ese numero no vale");
+            System.out.println("No me valen.");
+        } else { // si entra por aquí es que a y b son valores válidos; ya el resto del ejercicio lo hacemos dentro de este bloque
+            // Ahora tengo que ver cuál va a ser la base (el mayor) y cuál va a ser la altura (el otro, es decir, el que sea menor o igual)
+            // igual que en el ejercicio 25, creamos dos variables para guardar base y altura
 
-        } else if (a > b) {
-            for (int i = 0; i < b; i++) {
-                for (int j = 0; j < a; j++) {
-                    System.out.print(l + " ");
-                }
-                System.out.println("");
+            int base, altura;
+
+            if (a > b) {
+                base = a;
+                altura = b;
+            } else {
+                base = b;
+                altura = a;
             }
 
-        } else {
-            for (int i = 0; i < a; i++) {
-                for (int j = 0; j < b; j++) {
-                    System.out.print(l + " ");
+            // me falta pedir el carácter
+            System.out.print("Carácter: ");
+            char c = sc.next().charAt(0);
+
+            // Ahora que ya sé cuál es la base y cuál la altura, pinto el rectángulo
+            for (int i = 0; i < altura; i++) {
+                for (int j = 0; j < base; j++) {
+                    System.out.print(c + " ");
                 }
-                System.out.println("");
+                System.out.println();
             }
         }
     }

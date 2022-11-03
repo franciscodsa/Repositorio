@@ -2,7 +2,7 @@ package estructurasdecontrol;
 
 import java.util.Scanner;
 
-public class Ejercicio13 {
+public class Ejercicio13otraFormaMás {
     public static void main(String[] args) {
 //        13. La asociación de vinicultores tiene como política fijar un precio inicial al kilo de uva, la cual se clasifica en tipos A y B, y además en tamaños 1 y 2.
 //        Cuando se realiza la venta del producto, ésta es de un solo tipo (A o B) y tamaño (1 o 2).
@@ -31,16 +31,31 @@ public class Ejercicio13 {
 
     // La idea es que el precio (por kilo) va a ser distinto según sea el tipo y el tamaño
         double precio = 0; // creo esta variable para guardar el precio según el caso
-        if (tipo == 'A' && tamaño == 1) {
-            precio = precioInicial + 0.2;
-        } else if (tipo == 'A' && tamaño == 2) {
-            precio = precioInicial + 0.3;
-        } else if (tipo == 'B' && tamaño == 1) {
-            precio = precioInicial - 0.3;
-        } else if (tipo == 'B' && tamaño == 2) {
-            precio = precioInicial - 0.5;
-        } else {
-            System.out.println("Mal. Datos incorrectos");
+
+        switch (tipo) {
+            case 'A':
+                switch (tamaño) {
+                    case 1:
+                        precio = precioInicial + 0.2;
+                        break;
+                    case 2:
+                        precio = precioInicial + 0.3;
+                        break;
+                    default:
+                        System.out.println("Valor incorrecto");
+                }
+                break;
+            case 'B':
+                switch (tamaño) {
+                    case 1:
+                        precio = precioInicial - 0.3;
+                        break;
+                    case 2:
+                        precio = precioInicial - 0.5;
+                        break;
+                    default:
+                        System.out.println("Valor incorrecto");
+                }
         }
 
 //        Escribe un programa para determinar el precio al que se tendrán que vender las uvas

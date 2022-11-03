@@ -4,24 +4,30 @@ import java.util.Scanner;
 
 public class Ejercicio24 {
     public static void main(String[] args) {
+//        24. Realiza un programa que pida el precio de venta de un producto,
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Precio del producto: ");
+        double precio = sc.nextDouble(); // 100
 
-        //pido precio de producto
-        System.out.println("precio del producto");
-        Scanner sc= new Scanner(System.in);
-        double precio = sc.nextDouble();
+//        la cantidad de productos comprados
+        System.out.print("Cantidad de productos a comprar: ");
+        int cantidad = sc.nextInt(); // 5
 
-        //cantidad de productos
-        System.out.println("cantidad de productos");
-        int cantidad = sc.nextInt();
+//        y el porcentaje de IVA aplicado.
+        System.out.print("Porcentaje de IVA a aplicar: ");
+        double porcentajeIVA = sc.nextDouble(); // 10
 
-        //porcentaje de IVA que aplica
-        System.out.println("IVA que aplica");
-        double porcentajeIVA = sc.nextDouble();
+//        El programa mostrará el importe a abonar.
+        // 1ª) Calcular el precio sin IVA
+        double precioSinIVA = precio * cantidad;
+        //System.out.println(precioSinIVA); // 500
 
-        //calcular total
+        // 2ª Calcular el iva calculado
+        double ivaCalculado = precioSinIVA * porcentajeIVA / 100; // 500 * 10 / 100 = 50
+        //System.out.println(ivaCalculado);
 
-        System.out.println("Total: " + ((precio * cantidad) + ((precio * cantidad) * (porcentajeIVA/100))));
-
-
+        // 3ª Precio con iva
+        double precioConIVA = precioSinIVA + ivaCalculado; // 500 + 50
+        System.out.println("Debe abonar " + precioConIVA + "€.");
     }
 }

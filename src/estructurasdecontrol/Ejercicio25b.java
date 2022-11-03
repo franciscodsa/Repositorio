@@ -2,7 +2,7 @@ package estructurasdecontrol;
 
 import java.util.Scanner;
 
-public class Ejercicio25 {
+public class Ejercicio25b {
     public static void main(String[] args) {
 //        25. Hacer el ejercicio anterior, pero sin asumir que el primer número es menor que el
 //        segundo.
@@ -19,14 +19,17 @@ public class Ejercicio25 {
         // si a es mayor que b, hacemos la suma desde a hasta b
         // pero si b es mayor que a hacemos la suma desde b hasta a
         int suma = 0;
+        int mayor, menor;
+        // puedo declarar dos variables enteras, que guarden el número mayor y menor respectivamente y luego hago un sólo for desde menor hasta mayor
         if (a < b) {
-            for (int i = a; i <= b; i++) {
-                suma = suma + i;
-            }
+            menor = a;
+            mayor = b;
         } else { // si b es menor o igual que a
-            for (int i = b; i <= a; i++) {
-                suma = suma + i;
-            }
+            menor = b;
+            mayor = a;
+        }
+        for (int i = menor; i <= mayor ; i++) {
+            suma = suma + i;
         }
         System.out.println(suma);
     }
